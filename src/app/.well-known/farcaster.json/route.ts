@@ -12,13 +12,13 @@ export async function GET() {
     frame: {
       version: '1',
       name: 'Degen Official',
-      iconUrl: 'https://app.degen.tips/icon.png',
-      homeUrl: 'https://app.degen.tips',
-      imageUrl: 'https://app.degen.tips/image.png',
-      buttonTitle: 'Check this out',
-      splashImageUrl: 'https://app.degen.tips/splash.png',
-      splashBackgroundColor: '#eeccff',
-      webhookUrl: 'https://app.degen.tips/api/webhook',
+      iconUrl: `${appUrl}/icon.png`,
+      homeUrl: appUrl,
+      imageUrl: `${appUrl}/opengraph-image`,
+      buttonTitle: 'Launch Frame',
+      splashImageUrl: `${appUrl}/splash.png`,
+      splashBackgroundColor: '#a855f7',
+      webhookUrl: `${appUrl}/api/webhook`,
     },
   };
 
