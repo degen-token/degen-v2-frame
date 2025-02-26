@@ -7,7 +7,8 @@
     "ngrok": "ngrok http http://localhost:3000 --url=normal-hermit-new.ngrok-free.app",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel:vars": "vercel env pull .env.development.local"
   },
   "dependencies": {
     "@farcaster/frame-sdk": "^0.0.28",
