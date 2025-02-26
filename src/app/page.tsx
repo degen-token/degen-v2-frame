@@ -7,9 +7,5 @@ const Demo = dynamic(() => import('@/components/Demo'), {
 });
 
 export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <Demo />
-    </main>
-  );
+  return <Demo />;
 }
