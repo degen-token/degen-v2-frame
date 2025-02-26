@@ -4,24 +4,32 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "ngrok": "ngrok http http://localhost:3000 --url=normal-hermit-new.ngrok-free.app",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel:vars": "vercel env pull .env.development.local"
   },
   "dependencies": {
+    "@farcaster/frame-sdk": "^0.0.28",
+    "@tanstack/react-query": "^5.66.9",
+    "framer-motion": "^12.4.7",
+    "next": "15.1.7",
     "react": "^19.0.0",
+    "react-confetti": "^6.2.3",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "viem": "2.x",
+    "wagmi": "^2.14.12"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
