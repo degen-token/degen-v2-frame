@@ -6,9 +6,9 @@ import { frameConnector } from '@/lib/connector';
 export const config = createConfig({
   chains: [base],
   transports: {
-    [base.id]: http(),
-    [baseSepolia.id]: http(),
-    [degen.id]: http(),
+    [base.id]: http(process.env.NEXT_PUBLIC_BASE_URL),
+    [baseSepolia.id]: http(process.env.NEXT_PUBLIC_BASE_SEPOLIA_URL),
+    [degen.id]: http(process.env.NEXT_PUBLIC_DEGEN_URL),
   },
   connectors: [frameConnector()],
 });
