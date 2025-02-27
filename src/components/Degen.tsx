@@ -1,9 +1,9 @@
-import sdk from '@farcaster/frame-sdk';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import Confetti from 'react-confetti';
 import Footer from '@/components/ui/Footer';
+import sdk from '@farcaster/frame-sdk';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Confetti from 'react-confetti';
 
 export default function Demo() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
