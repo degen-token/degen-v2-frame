@@ -48,7 +48,9 @@ export default function Degen() {
               : connect({ connector: config.connectors[1] })
           }
         >
-          {isConnected ? 'Disconnect' : 'Connect'}
+          {isConnected
+            ? `${address?.slice(0, 6)}...${address?.slice(-4)}`
+            : 'Connect'}
         </Button>
       </div>
 
