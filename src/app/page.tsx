@@ -7,7 +7,7 @@ const frame = {
   version: 'next',
   imageUrl: `${appUrl}/image.gif`,
   button: {
-    title: 'Start',
+    title: 'Open',
     action: {
       type: 'launch_frame',
       name: 'Degen Official',
