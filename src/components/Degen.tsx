@@ -45,7 +45,7 @@ export default function Degen() {
           onClick={() =>
             isConnected
               ? disconnect()
-              : connect({ connector: config.connectors[1] })
+              : connect({ connector: config.connectors[0] })
           }
         >
           {isConnected
