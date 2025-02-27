@@ -39,7 +39,7 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center text-white animate-gradient-x bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-slate-900 text-white p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
       <div className="absolute top-4 right-4">
         <Button
           onClick={() =>
@@ -91,24 +91,6 @@ export default function Degen() {
       </motion.div>
 
       <Footer />
-
-      <style jsx>{`
-        @keyframes gradient-x {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        .animate-gradient-x {
-          background-size: 200% 200%;
-          animation: gradient-x 6s ease infinite;
-        }
-      `}</style>
     </div>
   );
 }
