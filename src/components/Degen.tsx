@@ -41,7 +41,7 @@ export default function Demo() {
         transition={{ duration: 2.0 }}
       >
         <Image
-          src={context?.user.pfpUrl || '/default-profile.png'}
+          src={context?.user.pfpUrl || '/default_pfp.jpg'}
           alt="Degen Profile"
           width={120}
           height={120}
