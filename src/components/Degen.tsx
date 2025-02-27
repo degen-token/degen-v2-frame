@@ -1,13 +1,21 @@
-import Footer from '@/components/ui/Footer';
 import sdk, { type Context } from '@farcaster/frame-sdk';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
+import { useAccount, useConnect, useDisconnect } from 'wagmi';
+
+import { config } from '@/components/providers/WagmiProvider';
+import Button from '@/components/ui/Button';
+import Footer from '@/components/ui/Footer';
 
 export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<Context.FrameContext>();
+
+  const { address, isConnected } = useAccount();
+  const { disconnect } = useDisconnect();
+  const { connect } = useConnect();
 
   const [showConfetti, setShowConfetti] = useState(false);
 
@@ -31,7 +39,19 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-white animate-gradient-x bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <div className="relative min-h-screen flex flex-col items-center justify-center text-white animate-gradient-x bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+      <div className="absolute top-4 right-4">
+        <Button
+          onClick={() =>
+            isConnected
+              ? disconnect()
+              : connect({ connector: config.connectors[1] })
+          }
+        >
+          {isConnected ? 'Disconnect' : 'Connect'}
+        </Button>
+      </div>
+
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
 
       {/* Profile Picture */}
@@ -60,12 +80,12 @@ export default function Degen() {
         <p className="mb-4 text-sm">
           Claim your daily airdrop and level up your degen power!
         </p>
-        <motion.button
-          className="w-full py-2 bg-white text-black font-extrabold rounded-full animate-bounce hover:animate-none transition transform hover:scale-105"
+        <Button
+          className="animate-bounce hover:animate-none transition transform hover:scale-105 "
           onClick={claimAirdrop}
         >
           Claim Airdrop 🚀
-        </motion.button>
+        </Button>
       </motion.div>
 
       <Footer />
