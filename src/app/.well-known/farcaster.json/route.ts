@@ -11,11 +11,11 @@ export async function GET() {
     },
     frame: {
       version: '1',
-      name: 'Degen Official',
+      name: 'Degen',
       iconUrl: `${appUrl}/icon.png`,
       homeUrl: appUrl,
       imageUrl: `${appUrl}/image.gif`,
-      buttonTitle: 'Start',
+      buttonTitle: 'Open',
       splashImageUrl: `${appUrl}/splash.png`,
       splashBackgroundColor: '#a855f7',
       webhookUrl: `${appUrl}/api/webhook`,
