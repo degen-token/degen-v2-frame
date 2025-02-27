@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const Demo = dynamic(() => import('@/components/Demo'), {
+const Demo = dynamic(() => import('@/components/Degen'), {
   ssr: false,
 });
 
