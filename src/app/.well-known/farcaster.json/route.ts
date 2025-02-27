@@ -11,7 +11,7 @@ export async function GET() {
     },
     frame: {
       version: '1',
-      name: 'Degen Official',
+      name: 'Degen',
       iconUrl: `${appUrl}/icon.png`,
       homeUrl: appUrl,
       imageUrl: `${appUrl}/image.gif`,

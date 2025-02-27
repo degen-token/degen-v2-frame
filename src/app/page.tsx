@@ -10,7 +10,7 @@ const frame = {
     title: 'Open',
     action: {
       type: 'launch_frame',
-      name: 'Degen Official',
+      name: 'Degen',
       url: appUrl,
       splashImageUrl: `${appUrl}/splash.png`,
       splashBackgroundColor: '#a855f7',
