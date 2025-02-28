@@ -1,5 +1,7 @@
+import { protoMono } from '@/styles/fonts';
 import type { Metadata } from 'next';
 import './globals.css';
+
 import { Providers } from '@/app/providers';
 
 export const metadata: Metadata = {
@@ -14,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${protoMono.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>

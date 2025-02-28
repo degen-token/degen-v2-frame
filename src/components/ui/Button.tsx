@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React from 'react';
 
 interface ButtonProps {
@@ -13,12 +12,13 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
 }) => {
   return (
-    <motion.button
+    <button
+      type="button"
       onClick={onClick}
-      className={`w-full px-4 py-2 bg-white text-black font-extrabold rounded-full ${className}`}
+      className={`bg-violet-500 px-3.5 py-2.5 font-semibold text-slate-900 shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 ${className}`}
     >
       {children}
-    </motion.button>
+    </button>
   );
 };
 
