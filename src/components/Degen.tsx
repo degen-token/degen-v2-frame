@@ -76,17 +76,15 @@ export default function Degen() {
         className="w-11/12 max-w-md p-4 bg-black bg-opacity-70 rounded-lg shadow-2xl text-center mb-6"
         whileHover={{ scale: 1.05 }}
       >
-        <h2 className="text-3xl font-extrabold mb-3 animate-pulse">
-          Airdrop Claim
-        </h2>
+        <h2 className="text-3xl font-extrabold mb-3 animate-pulse">Airdrop</h2>
         <p className="mb-4 text-sm">
           Claim your daily airdrop and level up your degen power!
         </p>
         <Button
-          className="animate-bounce hover:animate-none transition transform hover:scale-105 "
+          className="transition transform hover:scale-105 "
           onClick={claimAirdrop}
         >
-          Claim Airdrop 🚀
+          Claim
         </Button>
       </motion.div>
 
