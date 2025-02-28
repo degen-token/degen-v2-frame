@@ -59,7 +59,7 @@ export default function Degen() {
       {/* Profile Picture */}
       <motion.div
         className="mb-8"
-        animate={{ scale: [0.8, 1.2, 1] }}
+        animate={{ scale: [0.9, 1.1, 1] }}
         transition={{ duration: 2.0 }}
       >
         <Image
@@ -67,7 +67,7 @@ export default function Degen() {
           alt="Degen Profile"
           width={120}
           height={120}
-          className="rounded-md border-2 border-grey-slate-200 shadow-lg"
+          className="rounded-sm border-2 border-slate-800/30 shadow-lg"
         />
       </motion.div>
 
@@ -77,7 +77,7 @@ export default function Degen() {
         whileHover={{ scale: 1.05 }}
       >
         <h2 className="text-4xl font-extrabold mb-3 animate-pulse">Airdrop</h2>
-        <p className="mb-4 text-sm">
+        <p className="mb-4">
           Claim your daily airdrop and level up your degen power!
         </p>
         <Button
