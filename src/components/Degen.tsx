@@ -39,7 +39,7 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-slate-900 text-white p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <div className="bg-slate-900 text-white relative min-h-screen flex flex-col items-center justify-center  p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
       <div className="absolute top-4 right-4">
         <Button
           onClick={() =>
@@ -67,7 +67,7 @@ export default function Degen() {
           alt="Degen Profile"
           width={120}
           height={120}
-          className="rounded-full border-4 border-white shadow-lg"
+          className="rounded-md border-2 border-grey-slate-200 shadow-lg"
         />
       </motion.div>
 
