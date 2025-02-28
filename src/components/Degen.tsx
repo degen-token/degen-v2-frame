@@ -39,7 +39,7 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className="bg-slate-900 text-white relative min-h-screen flex flex-col items-center justify-center  p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <div className="bg-slate-900 text-white font-proto relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
       <div className="absolute top-4 right-4">
         <Button
           onClick={() =>
