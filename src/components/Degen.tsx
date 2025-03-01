@@ -6,7 +6,7 @@ import Confetti from 'react-confetti';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { config } from '@/components/providers/WagmiProvider';
-import Button from '@/components/ui/Button';
+import ButtonPrimary from '@/components/ui/ButtonPrimary';
 import Footer from '@/components/ui/Footer';
 
 export default function Degen() {
@@ -41,7 +41,7 @@ export default function Degen() {
   return (
     <div className="bg-slate-900 text-white font-proto relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
       <div className="absolute top-4 right-4">
-        <Button
+        <ButtonPrimary
           onClick={() =>
             isConnected
               ? disconnect()
@@ -51,7 +51,7 @@ export default function Degen() {
           {isConnected
             ? `${address?.slice(0, 6)}...${address?.slice(-4)}`
             : 'Connect'}
-        </Button>
+        </ButtonPrimary>
       </div>
 
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
@@ -80,12 +80,12 @@ export default function Degen() {
         <p className="mb-4">
           Claim your daily airdrop and level up your degen power!
         </p>
-        <Button
+        <ButtonPrimary
           className="w-full mx-auto transition transform hover:scale-105"
           onClick={claimAirdrop}
         >
           Claim
-        </Button>
+        </ButtonPrimary>
       </motion.div>
 
       <Footer />

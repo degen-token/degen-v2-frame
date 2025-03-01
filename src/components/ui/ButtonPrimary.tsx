@@ -6,7 +6,7 @@ interface ButtonProps {
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ButtonPrimary: React.FC<ButtonProps> = ({
   onClick,
   children,
   className = '',
@@ -22,4 +22,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export default ButtonPrimary;
