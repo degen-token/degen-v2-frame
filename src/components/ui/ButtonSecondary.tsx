@@ -6,11 +6,11 @@ interface ButtonProps {
   className?: string;
 }
 
-const ButtonSecondary: React.FC<ButtonProps> = ({
+export default function ButtonSecondary({
   onClick,
   children,
   className = '',
-}) => {
+}: ButtonProps) {
   return (
     <button
       type="button"
@@ -20,6 +20,4 @@ const ButtonSecondary: React.FC<ButtonProps> = ({
       {children}
     </button>
   );
-};
-
-export default ButtonSecondary;
+}
