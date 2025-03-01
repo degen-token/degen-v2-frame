@@ -6,6 +6,7 @@ import Confetti from 'react-confetti';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { config } from '@/components/providers/WagmiProvider';
+import Container from '@/components/ui/Container';
 import ButtonPrimary from '@/components/ui/ButtonPrimary';
 import ButtonSecondary from '@/components/ui/ButtonSecondary';
 import Footer from '@/components/ui/Footer';
@@ -40,7 +41,7 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className=" relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <Container>
       <div className="absolute top-4 right-4">
         {/* Wallet Button */}
         <ButtonSecondary
@@ -88,6 +89,6 @@ export default function Degen() {
       </motion.div>
 
       <Footer />
-    </div>
+    </Container>
   );
 }
