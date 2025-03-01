@@ -7,6 +7,7 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { config } from '@/components/providers/WagmiProvider';
 import ButtonPrimary from '@/components/ui/ButtonPrimary';
+import ButtonSecondary from '@/components/ui/ButtonSecondary';
 import Footer from '@/components/ui/Footer';
 
 export default function Degen() {
@@ -39,9 +40,9 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className="bg-slate-900 text-white font-proto relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <div className=" relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
       <div className="absolute top-4 right-4">
-        <ButtonPrimary
+        <ButtonSecondary
           onClick={() =>
             isConnected
               ? disconnect()
@@ -51,7 +52,7 @@ export default function Degen() {
           {isConnected
             ? `${address?.slice(0, 6)}...${address?.slice(-4)}`
             : 'Connect'}
-        </ButtonPrimary>
+        </ButtonSecondary>
       </div>
 
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}

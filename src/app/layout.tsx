@@ -16,8 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${protoMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+      <body className={`${protoMono.variable} antialiased bg-slate-900`}>
+        <div className="font-proto text-gray-300">
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );
