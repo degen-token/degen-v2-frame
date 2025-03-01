@@ -47,20 +47,24 @@ export default function Degen() {
           onClick={() =>
             isConnected
               ? disconnect()
-              : connect({ connector: config.connectors[0] })
+              : connect({ connector: config.connectors[1] })
           }
-          className="flex items-center space-x-2 text-xs" // makes children horizontal with spacing
+          className="flex items-center space-x-2 text-xs px-2 py-1 h-8" // makes children horizontal with spacing
         >
-          <Image
-            src={context?.user.pfpUrl || '/default_pfp.jpg'}
-            alt="Degen Profile"
-            width={120}
-            height={120}
-            className="w-8 h-8 mr-2 rounded-sm border-2 border-slate-800/30 shadow-lg"
-          />
-          {isConnected
-            ? `${address?.slice(0, 6)}...${address?.slice(-4)}`
-            : 'Connect'}
+          {isConnected ? (
+            <>
+              <Image
+                src={context?.user.pfpUrl || '/default_pfp.jpg'}
+                alt="Degen Profile"
+                width={120}
+                height={120}
+                className="w-6 h-6 mr-2 rounded-sm border-2 border-slate-800/30 shadow-lg"
+              />
+              {address?.slice(0, 6)}...{address?.slice(-4)}
+            </>
+          ) : (
+            'Connect'
+          )}
         </ButtonSecondary>
       </div>
 
