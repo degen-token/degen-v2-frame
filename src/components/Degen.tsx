@@ -42,13 +42,22 @@ export default function Degen() {
   return (
     <div className=" relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
       <div className="absolute top-4 right-4">
+        {/* Wallet Button */}
         <ButtonSecondary
           onClick={() =>
             isConnected
               ? disconnect()
               : connect({ connector: config.connectors[0] })
           }
+          className="flex items-center space-x-2 text-xs" // makes children horizontal with spacing
         >
+          <Image
+            src={context?.user.pfpUrl || '/default_pfp.jpg'}
+            alt="Degen Profile"
+            width={120}
+            height={120}
+            className="w-8 h-8 mr-2 rounded-sm border-2 border-slate-800/30 shadow-lg"
+          />
           {isConnected
             ? `${address?.slice(0, 6)}...${address?.slice(-4)}`
             : 'Connect'}
@@ -56,21 +65,6 @@ export default function Degen() {
       </div>
 
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
-
-      {/* Profile Picture */}
-      <motion.div
-        className="mb-8"
-        animate={{ scale: [0.9, 1.1, 1] }}
-        transition={{ duration: 2.0 }}
-      >
-        <Image
-          src={context?.user.pfpUrl || '/default_pfp.jpg'}
-          alt="Degen Profile"
-          width={120}
-          height={120}
-          className="rounded-sm border-2 border-slate-800/30 shadow-lg"
-        />
-      </motion.div>
 
       {/* Airdrop Claim Section */}
       <motion.div
