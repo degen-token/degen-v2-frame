@@ -1,8 +1,9 @@
-import { protoMono } from '@/styles/fonts';
+import clsx from 'clsx';
 import type { Metadata } from 'next';
-import './globals.css';
 
 import { Providers } from '@/app/providers';
+import { protoMono } from '@/styles/fonts';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Degen Official',
@@ -16,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${protoMono.variable} antialiased bg-slate-900`}>
-        <div className="font-proto text-neutral-300">
+      <body className={clsx('antialiased bg-slate-900', protoMono.variable)}>
+        <div className="font-mono text-neutral-300">
           <Providers>{children}</Providers>
         </div>
       </body>

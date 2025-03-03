@@ -59,7 +59,7 @@ export default function Degen() {
                 alt="Degen Profile"
                 width={120}
                 height={120}
-                className="w-6 h-6 mr-2 rounded-sm border-2 border-slate-800/30 shadow-lg"
+                className="w-6 h-6 mr-2 rounded-xs border-2 border-slate-800/30 shadow-lg"
               />
               {address?.slice(0, 6)}...{address?.slice(-4)}
             </>
