@@ -6,7 +6,9 @@ import Confetti from 'react-confetti';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { config } from '@/components/providers/WagmiProvider';
-import Button from '@/components/ui/Button';
+import Container from '@/components/ui/Container';
+import ButtonPrimary from '@/components/ui/ButtonPrimary';
+import ButtonSecondary from '@/components/ui/ButtonSecondary';
 import Footer from '@/components/ui/Footer';
 
 export default function Degen() {
@@ -39,37 +41,35 @@ export default function Degen() {
   }, [isSDKLoaded]);
 
   return (
-    <div className="bg-slate-900 text-white font-proto relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-screen-sm mx-auto">
+    <Container>
       <div className="absolute top-4 right-4">
-        <Button
+        {/* Wallet Button */}
+        <ButtonSecondary
           onClick={() =>
             isConnected
               ? disconnect()
-              : connect({ connector: config.connectors[0] })
+              : connect({ connector: config.connectors[1] })
           }
+          className="flex items-center space-x-2 text-xs px-2 py-1 h-8" // makes children horizontal with spacing
         >
-          {isConnected
-            ? `${address?.slice(0, 6)}...${address?.slice(-4)}`
-            : 'Connect'}
-        </Button>
+          {isConnected ? (
+            <>
+              <Image
+                src={context?.user.pfpUrl || '/default_pfp.jpg'}
+                alt="Degen Profile"
+                width={120}
+                height={120}
+                className="w-6 h-6 mr-2 rounded-xs border-2 border-slate-800/30 shadow-lg"
+              />
+              {address?.slice(0, 6)}...{address?.slice(-4)}
+            </>
+          ) : (
+            'Connect'
+          )}
+        </ButtonSecondary>
       </div>
 
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
-
-      {/* Profile Picture */}
-      <motion.div
-        className="mb-8"
-        animate={{ scale: [0.9, 1.1, 1] }}
-        transition={{ duration: 2.0 }}
-      >
-        <Image
-          src={context?.user.pfpUrl || '/default_pfp.jpg'}
-          alt="Degen Profile"
-          width={120}
-          height={120}
-          className="rounded-sm border-2 border-slate-800/30 shadow-lg"
-        />
-      </motion.div>
 
       {/* Airdrop Claim Section */}
       <motion.div
@@ -80,15 +80,15 @@ export default function Degen() {
         <p className="mb-4">
           Claim your daily airdrop and level up your degen power!
         </p>
-        <Button
+        <ButtonPrimary
           className="w-full mx-auto transition transform hover:scale-105"
           onClick={claimAirdrop}
         >
           Claim
-        </Button>
+        </ButtonPrimary>
       </motion.div>
 
       <Footer />
-    </div>
+    </Container>
   );
 }
