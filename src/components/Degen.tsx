@@ -50,7 +50,7 @@ export default function Degen() {
               ? disconnect()
               : connect({ connector: config.connectors[1] })
           }
-          className="flex items-center space-x-2 text-xs px-2 py-1 h-8" // makes children horizontal with spacing
+          className="flex items-center space-x-2 text-xs px-2 py-1 h-8"
         >
           {isConnected ? (
             <>
@@ -76,9 +76,13 @@ export default function Degen() {
         className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-slate-800 text-center mb-6"
         whileHover={{ scale: 1.05 }}
       >
-        <h2 className="text-4xl font-extrabold mb-3 animate-pulse">Airdrop</h2>
+        <h2 className="text-4xl text-neutral-200 font-extrabold mb-2">
+          Airdrop
+        </h2>
+        <h2 className="text-xl font-extrabold mb-3 animate-pulse">Season 13</h2>
         <p className="mb-4">
-          Claim your daily airdrop and level up your degen power!
+          Thank you for being part of this degen ride. Keep tipping, keep having
+          fun!
         </p>
         <ButtonPrimary
           className="w-full mx-auto transition transform hover:scale-105"
