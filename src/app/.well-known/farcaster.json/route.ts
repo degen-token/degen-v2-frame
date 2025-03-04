@@ -18,7 +18,7 @@ export async function GET() {
       buttonTitle: 'Open',
       splashImageUrl: `${appUrl}/splash.png`,
       splashBackgroundColor: '#a855f7',
-      webhookUrl: `${appUrl}/api/webhook`,
+      webhookUrl: `https://api.neynar.com/f/app/d10b038c-f875-4dfe-9094-3569216fd4d3/event`,
     },
   };
 
