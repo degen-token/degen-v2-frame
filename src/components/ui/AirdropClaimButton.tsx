@@ -104,22 +104,6 @@ export default function AirdropClaimButton({
             </Button>
           </>
         )}
-      <>
-        {' '}
-        <div>
-          <Text>Error: {error ? error.message : 'None'}</Text>
-          <Text>Data: {data ? JSON.stringify(data) : 'None'}</Text>
-          <Text>Merkle Index: {merkleIndex}</Text>
-          <Text>Merkle Wallet: {merkleWallet}</Text>
-          <Text>Merkle Amount: {merkleAmount}</Text>
-          <Text>
-            Merkle Proof: {merkleProof ? JSON.stringify(merkleProof) : 'None'}
-          </Text>
-          <Text>Is Claimed: {isClaimed ? 'Yes' : 'No'}</Text>
-          <Text>Hash: {hash ? hash : 'None'}</Text>
-          <Text>Status: {status}</Text>
-        </div>
-      </>
     </div>
   );
 }
