@@ -28,12 +28,10 @@ const canvasStyles: CSSProperties = {
 export default function AirdropClaimButton({
   airdropContract,
   merkleProofApi,
-  claimMessage,
   isDegenChain = false,
 }: {
   airdropContract: string;
   merkleProofApi: string;
-  claimMessage: string;
   isDegenChain?: boolean;
 }) {
   const { isConnected, address } = useAccount();
@@ -80,7 +78,6 @@ export default function AirdropClaimButton({
       {!isConnected && (
         <>
           <Text>Connect your wallet to claim your rewards!</Text>
-          <Text>{claimMessage}</Text>
         </>
       )}
 
