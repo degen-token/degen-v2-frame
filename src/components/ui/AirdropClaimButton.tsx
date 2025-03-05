@@ -33,10 +33,10 @@ export default function AirdropClaimButton({
     fetcher
   );
 
-  var merkleIndex = 999999;
-  var merkleProof;
-  var merkleAmount;
-  var merkleWallet;
+  let merkleIndex = 999999;
+  let merkleProof;
+  let merkleAmount;
+  let merkleWallet;
   if (airdrop1Proof && airdrop1Proof[0]) {
     merkleIndex = airdrop1Proof[0].index;
     merkleWallet = airdrop1Proof[0].wallet_address;
