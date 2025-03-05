@@ -40,7 +40,7 @@ export default function Degen() {
         <Subheading className="animate-pulse">Season 13</Subheading>
 
         <AirdropClaimButton
-          airdropContract="060f31a459D531987bEfd5a09c31B09946063cB3"
+          airdropContract="d847F27d3C903a518Be2838fd59F723de4EdbD07"
           merkleProofApi="https://api.degen.tips/airdrop2/season13/merkleproofs"
           isDegenChain={true}
         />
