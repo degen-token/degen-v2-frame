@@ -2,10 +2,10 @@
 
 import dynamic from 'next/dynamic';
 
-const Demo = dynamic(() => import('@/components/Degen'), {
+const Degen = dynamic(() => import('@/components/Degen'), {
   ssr: false,
 });
 
 export default function App() {
-  return <Demo />;
+  return <Degen />;
 }
