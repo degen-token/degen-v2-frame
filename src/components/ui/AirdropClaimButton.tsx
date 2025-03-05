@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 
-import degenAirdrop1Abi from '@/abis/DegenAirdrop1.json';
+import { CSSProperties } from 'react';
+import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
 import {
   useAccount,
   useReadContract,
@@ -8,12 +9,22 @@ import {
   useSwitchChain,
   useWriteContract,
 } from 'wagmi';
-import { base, degen } from 'wagmi/chains';
+import { degen } from 'wagmi/chains';
 
+import degenAirdrop1Abi from '@/abis/DegenAirdrop1.json';
 import { Button } from '@/components/catalyst/button';
 import { Text } from '@/components/catalyst/text';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+const canvasStyles: CSSProperties = {
+  position: 'fixed',
+  pointerEvents: 'none',
+  width: '100%',
+  height: '100%',
+  top: 0,
+  left: 0,
+};
 
 export default function AirdropClaimButton({
   airdropContract,
@@ -54,14 +65,19 @@ export default function AirdropClaimButton({
     address: `0x${airdropContract}`,
     abi: degenAirdrop1Abi,
     functionName: 'claim',
-    chainId: isDegenChain ? degen.id : base.id,
+    chainId: degen.id,
     args: [merkleIndex, merkleWallet, merkleAmount, merkleProof],
   });
 
   console.log(error);
   console.log(data);
 
-  const { data: hash, status, writeContract } = useWriteContract();
+  const {
+    data: hash,
+    error: contractError,
+    status,
+    writeContract,
+  } = useWriteContract();
 
   return (
     <div className="flex min-w-full flex-col items-center py-4 space-y-4">
@@ -88,6 +104,7 @@ export default function AirdropClaimButton({
             <Text className="pt-8">
               You&apos;ve successfully claimed your rewards!
             </Text>
+            <Fireworks autorun={{ speed: 1 }} style={canvasStyles} />
           </>
         )}
 
@@ -100,7 +117,6 @@ export default function AirdropClaimButton({
             <Button
               color="violet"
               onClick={() => {
-                switchChain({ chainId: isDegenChain ? degen.id : base.id });
                 writeContract(data!.request);
               }}
             >
