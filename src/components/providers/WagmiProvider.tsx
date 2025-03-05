@@ -2,7 +2,7 @@ import { createConfig, http, WagmiProvider } from 'wagmi';
 import { base, baseSepolia, degen } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { frameConnector } from '@/lib/connector';
-import { metaMask } from 'wagmi/connectors';
+import { metaMask, coinbaseWallet } from 'wagmi/connectors';
 
 export const config = createConfig({
   chains: [base, baseSepolia, degen],

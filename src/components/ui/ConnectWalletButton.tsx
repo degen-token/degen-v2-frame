@@ -19,7 +19,7 @@ export default function ConnectWalletButton() {
       onClick={() =>
         isConnected
           ? disconnect()
-          : connect({ connector: config.connectors[1] })
+          : connect({ connector: config.connectors[2] })
       }
       className="flex items-center space-x-2 text-xs px-2 py-1 h-8"
     >
