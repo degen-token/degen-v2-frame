@@ -1,7 +1,6 @@
 import sdk, { type Context } from '@farcaster/frame-sdk';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import Confetti from 'react-confetti';
 
 import { Heading, Subheading } from '@/components/catalyst/heading';
 import AirdropClaimButton from '@/components/ui/AirdropClaimButton';
