@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx('antialiased bg-slate-900', protoMono.variable)}>
-        <div className="font-mono text-neutral-300">
+        <div className="font-mono dark">
           <Providers>{children}</Providers>
         </div>
       </body>
