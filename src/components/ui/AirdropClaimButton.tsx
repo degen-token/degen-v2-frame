@@ -1,5 +1,3 @@
-'use client';
-
 import { CSSProperties } from 'react';
 import useSWR from 'swr';
 
@@ -13,11 +11,8 @@ import {
 } from 'wagmi';
 import { base, baseSepolia, degen } from 'wagmi/chains';
 
-import { Text, TextLink } from '@/components/catalyst/text';
+import { Text } from '@/components/catalyst/text';
 import { Button } from '@/components/catalyst/button';
-
-const BASESCAN_URL = 'https://basescan.org/tx/';
-const DEGEN_EXPLORER_URL = 'https://explorer.degen.tips/tx/';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -104,17 +99,7 @@ export default function AirdropClaimButton({
         data && (
           <>
             <Text className="pt-8">
-              <TextLink
-                href={
-                  isDegenChain
-                    ? `${DEGEN_EXPLORER_URL}${hash}`
-                    : `${BASESCAN_URL}${hash}`
-                }
-                target="_blank"
-              >
-                You&apos;ve successfully claimed your rewards! View on{' '}
-                {isDegenChain ? 'Degen Explorer' : 'BaseScan'}.
-              </TextLink>
+              You&apos;ve successfully claimed your rewards!
             </Text>
           </>
         )}
