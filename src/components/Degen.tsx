@@ -2,21 +2,16 @@ import sdk, { type Context } from '@farcaster/frame-sdk';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
-import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { Heading } from '@/components/catalyst/heading';
 import AirdropClaimButton from '@/components/ui/AirdropClaimButton';
+import ConnectWalletButton from '@/components/ui/ConnectWalletButton';
 import Container from '@/components/ui/Container';
 import Footer from '@/components/ui/Footer';
-import ConnectWalletButton from './ui/ConnectWalletButton';
 
 export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<Context.FrameContext>();
-
-  const { address, isConnected } = useAccount();
-  const { disconnect } = useDisconnect();
-  const { connect } = useConnect();
 
   const [showConfetti, setShowConfetti] = useState(false);
 
