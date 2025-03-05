@@ -12,8 +12,6 @@ export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<Context.FrameContext>();
 
-  const [showConfetti, setShowConfetti] = useState(false);
-
   const pfpUrl = context?.user.pfpUrl || '/default_pfp.jpg';
 
   useEffect(() => {
@@ -35,8 +33,6 @@ export default function Degen() {
       <div className="absolute top-4 right-4">
         <ConnectWalletButton pfpUrl={pfpUrl} />
       </div>
-
-      {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
 
       {/* Airdrop Claim Section */}
       <motion.div
