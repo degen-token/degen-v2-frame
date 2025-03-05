@@ -1,4 +1,3 @@
-import { CSSProperties } from 'react';
 import useSWR from 'swr';
 
 import degenAirdrop1Abi from '@/abis/DegenAirdrop1.json';
