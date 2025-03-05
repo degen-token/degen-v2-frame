@@ -54,14 +54,19 @@ export default function AirdropClaimButton({
     address: `0x${airdropContract}`,
     abi: degenAirdrop1Abi,
     functionName: 'claim',
-    chainId: isDegenChain ? degen.id : base.id,
+    chainId: degen.id,
     args: [merkleIndex, merkleWallet, merkleAmount, merkleProof],
   });
 
   console.log(error);
   console.log(data);
 
-  const { data: hash, status, writeContract } = useWriteContract();
+  const {
+    data: hash,
+    error: contractError,
+    status,
+    writeContract,
+  } = useWriteContract();
 
   return (
     <div className="flex min-w-full flex-col items-center py-4 space-y-4">
@@ -100,7 +105,6 @@ export default function AirdropClaimButton({
             <Button
               color="violet"
               onClick={() => {
-                switchChain({ chainId: isDegenChain ? degen.id : base.id });
                 writeContract(data!.request);
               }}
             >
