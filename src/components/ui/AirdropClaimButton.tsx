@@ -30,7 +30,7 @@ const canvasStyles: CSSProperties = {
   left: 0,
 };
 
-export default function AirdropClaim({
+export default function AirdropClaimButton({
   airdropContract,
   merkleProofApi,
   claimMessage,

@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
+import { Button } from '@/components/catalyst/button';
+import { Heading } from '@/components/catalyst/heading';
 import { config } from '@/components/providers/WagmiProvider';
 import Container from '@/components/ui/Container';
 import Footer from '@/components/ui/Footer';
-import AirdropClaim from './ui/AirdropClaim';
-import { Button } from '@/components/catalyst/button';
+import AirdropClaimButton from './ui/AirdropClaimButton';
 
 export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
@@ -77,16 +78,10 @@ export default function Degen() {
         className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-slate-700/15 text-center mb-6"
         whileHover={{ scale: 1.05 }}
       >
-        <h2 className="text-4xl text-neutral-200 font-extrabold mb-2">
-          Airdrop
-        </h2>
+        <Heading>Airdrop</Heading>
         <h2 className="text-xl font-extrabold mb-3 animate-pulse">Season 13</h2>
-        <p className="mb-4">
-          Thank you for being part of this degen ride. Keep tipping, keep having
-          fun!
-        </p>
 
-        <AirdropClaim
+        <AirdropClaimButton
           airdropContract="060f31a459D531987bEfd5a09c31B09946063cB3"
           merkleProofApi="https://api.degen.tips/airdrop2/season13/merkleproofs"
           claimMessage="Airdrop 2 Season 13 rewards can be claimed until March 31, 2025."
