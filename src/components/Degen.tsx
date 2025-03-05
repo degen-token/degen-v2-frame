@@ -11,8 +11,6 @@ export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<Context.FrameContext>();
 
-  const pfpUrl = context?.user.pfpUrl || '/default_pfp.jpg';
-
   useEffect(() => {
     const load = async () => {
       const context = await sdk.context;
@@ -30,7 +28,7 @@ export default function Degen() {
   return (
     <Container>
       <div className="absolute top-4 right-4">
-        <ConnectWalletButton pfpUrl={pfpUrl} />
+        <ConnectWalletButton />
       </div>
 
       {/* Airdrop Claim Section */}
