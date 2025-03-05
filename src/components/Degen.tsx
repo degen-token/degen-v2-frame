@@ -7,10 +7,9 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { config } from '@/components/providers/WagmiProvider';
 import Container from '@/components/ui/Container';
-import ButtonPrimary from '@/components/ui/ButtonPrimary';
-import ButtonSecondary from '@/components/ui/ButtonSecondary';
 import Footer from '@/components/ui/Footer';
 import AirdropClaim from './ui/AirdropClaim';
+import { Button } from '@/components/catalyst/button';
 
 export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
@@ -45,7 +44,8 @@ export default function Degen() {
     <Container>
       <div className="absolute top-4 right-4">
         {/* Wallet Button */}
-        <ButtonSecondary
+        <Button
+          outline
           onClick={() =>
             isConnected
               ? disconnect()
@@ -65,16 +65,16 @@ export default function Degen() {
               {address?.slice(0, 6)}...{address?.slice(-4)}
             </>
           ) : (
-            'Connect'
+            <>Connect</>
           )}
-        </ButtonSecondary>
+        </Button>
       </div>
 
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
 
       {/* Airdrop Claim Section */}
       <motion.div
-        className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-slate-800 text-center mb-6"
+        className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-slate-700/15 text-center mb-6"
         whileHover={{ scale: 1.05 }}
       >
         <h2 className="text-4xl text-neutral-200 font-extrabold mb-2">
