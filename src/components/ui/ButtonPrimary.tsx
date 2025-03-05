@@ -17,7 +17,7 @@ export default function ButtonPrimary({
       type="button"
       onClick={onClick}
       className={clsx(
-        'bg-violet-500 px-3.5 py-2.5 font-semibold text-slate-900 shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500',
+        'bg-violet-500 px-3.5 py-2.5 font-semibold text-slate-900 shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-500',
         className
       )}
     >
