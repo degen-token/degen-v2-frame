@@ -6,7 +6,7 @@ import { protoMono } from '@/styles/fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Degen Official',
+  title: 'Degen',
   description: 'We are the Decentralized Generation.',
 };
 
