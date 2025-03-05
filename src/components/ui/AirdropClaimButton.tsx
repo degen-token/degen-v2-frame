@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 
-import degenAirdrop1Abi from '@/abis/DegenAirdrop1.json';
+import { CSSProperties } from 'react';
+import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
 import {
   useAccount,
   useReadContract,
@@ -8,12 +9,22 @@ import {
   useSwitchChain,
   useWriteContract,
 } from 'wagmi';
-import { base, degen } from 'wagmi/chains';
+import { degen } from 'wagmi/chains';
 
+import degenAirdrop1Abi from '@/abis/DegenAirdrop1.json';
 import { Button } from '@/components/catalyst/button';
 import { Text } from '@/components/catalyst/text';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+const canvasStyles: CSSProperties = {
+  position: 'fixed',
+  pointerEvents: 'none',
+  width: '100%',
+  height: '100%',
+  top: 0,
+  left: 0,
+};
 
 export default function AirdropClaimButton({
   airdropContract,
@@ -93,6 +104,7 @@ export default function AirdropClaimButton({
             <Text className="pt-8">
               You&apos;ve successfully claimed your rewards!
             </Text>
+            <Fireworks autorun={{ speed: 1 }} style={canvasStyles} />
           </>
         )}
 
