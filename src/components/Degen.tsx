@@ -94,7 +94,7 @@ export default function Degen() {
         <AirdropClaim
           airdropContract="060f31a459D531987bEfd5a09c31B09946063cB3"
           merkleProofApi="https://api.degen.tips/airdrop2/season13/merkleproofs"
-          claimMessage="Airdrop 2 Season 12 rewards can be claimed until March 31, 2025."
+          claimMessage="Airdrop 2 Season 13 rewards can be claimed until March 31, 2025."
           isDegenChain={true}
         />
       </motion.div>
