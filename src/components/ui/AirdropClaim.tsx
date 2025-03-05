@@ -13,8 +13,8 @@ import {
 } from 'wagmi';
 import { base, baseSepolia, degen } from 'wagmi/chains';
 
-import ButtonSecondary from '@/components/ui/ButtonSecondary';
 import { Text, TextLink } from '@/components/catalyst/text';
+import { Button } from '@/components/catalyst/button';
 
 const BASESCAN_URL = 'https://basescan.org/tx/';
 const DEGEN_EXPLORER_URL = 'https://explorer.degen.tips/tx/';
@@ -125,14 +125,15 @@ export default function AirdropClaim({
         airdrop1Proof &&
         airdrop1Proof[0] && (
           <>
-            <ButtonSecondary
+            <Button
+              color="violet"
               onClick={() => {
                 switchChain({ chainId: isDegenChain ? degen.id : base.id });
                 writeContract(data!.request);
               }}
             >
               Claim
-            </ButtonSecondary>
+            </Button>
           </>
         )}
     </div>
