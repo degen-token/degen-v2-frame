@@ -44,7 +44,7 @@ export default function Degen() {
 
       {/* Airdrop Claim Section */}
       <motion.div
-        className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-slate-700/15 text-center mb-6"
+        className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-violet-500/30 text-center mb-6"
         whileHover={{ scale: 1.05 }}
       >
         <Heading>Airdrop</Heading>
