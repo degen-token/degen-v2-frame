@@ -7,7 +7,6 @@ import { Heading, Subheading } from '@/components/catalyst/heading';
 import AirdropClaimButton from '@/components/ui/AirdropClaimButton';
 import ConnectWalletButton from '@/components/ui/ConnectWalletButton';
 import Container from '@/components/ui/Container';
-import Footer from '@/components/ui/Footer';
 
 export default function Degen() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
@@ -57,8 +56,6 @@ export default function Degen() {
           isDegenChain={true}
         />
       </motion.div>
-
-      <Footer />
     </Container>
   );
 }
