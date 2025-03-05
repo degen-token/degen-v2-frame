@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { Button } from '@/components/catalyst/button';
 import { config } from '@/components/providers/WagmiProvider';
 
-export default function ConnectWalletButton({ pfpUrl }: { pfpUrl: string }) {
+export default function ConnectWalletButton() {
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const { connect } = useConnect();
@@ -21,13 +20,6 @@ export default function ConnectWalletButton({ pfpUrl }: { pfpUrl: string }) {
     >
       {isConnected ? (
         <>
-          <Image
-            src={pfpUrl}
-            alt="Degen Profile"
-            width={120}
-            height={120}
-            className="w-6 h-6 mr-2 rounded-xs border-2 border-slate-800/30 shadow-lg"
-          />
           {address?.slice(0, 6)}...{address?.slice(-4)}
         </>
       ) : (
