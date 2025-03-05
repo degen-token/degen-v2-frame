@@ -1,14 +1,10 @@
-import { type Context } from '@farcaster/frame-sdk';
 import Image from 'next/image';
-import { useState } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 import { Button } from '@/components/catalyst/button';
 import { config } from '@/components/providers/WagmiProvider';
 
-export default function ConnectWalletButton() {
-  const [context, setContext] = useState<Context.FrameContext>();
-
+export default function ConnectWalletButton({ pfpUrl }: { pfpUrl: string }) {
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const { connect } = useConnect();
@@ -26,7 +22,7 @@ export default function ConnectWalletButton() {
       {isConnected ? (
         <>
           <Image
-            src={context?.user.pfpUrl || '/default_pfp.jpg'}
+            src={pfpUrl}
             alt="Degen Profile"
             width={120}
             height={120}

@@ -14,10 +14,7 @@ export default function Degen() {
 
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const claimAirdrop = () => {
-    setShowConfetti(true);
-    setTimeout(() => setShowConfetti(false), 30000);
-  };
+  const pfpUrl = context?.user.pfpUrl || '/default_pfp.jpg';
 
   useEffect(() => {
     const load = async () => {
@@ -36,7 +33,7 @@ export default function Degen() {
   return (
     <Container>
       <div className="absolute top-4 right-4">
-        <ConnectWalletButton />
+        <ConnectWalletButton pfpUrl={pfpUrl} />
       </div>
 
       {showConfetti && <Confetti numberOfPieces={500} recycle={true} />}
