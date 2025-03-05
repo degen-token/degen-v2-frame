@@ -9,10 +9,10 @@ import {
   useSwitchChain,
   useWriteContract,
 } from 'wagmi';
-import { base, baseSepolia, degen } from 'wagmi/chains';
+import { base, degen } from 'wagmi/chains';
 
-import { Text } from '@/components/catalyst/text';
 import { Button } from '@/components/catalyst/button';
+import { Text } from '@/components/catalyst/text';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
