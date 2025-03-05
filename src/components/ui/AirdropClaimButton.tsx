@@ -70,12 +70,15 @@ export default function AirdropClaimButton({
           <Text>Connect your wallet to claim your rewards!</Text>
         </>
       )}
+
       {isClaimed && <Text>You&apos;ve already claimed your rewards.</Text>}
+
       {isConnected && airdrop1Proof && !airdrop1Proof[0] && (
         <Text>
           We couldn&apos;t find any rewards linked to your wallet at this time.
         </Text>
       )}
+
       {isConnected &&
         status == 'success' &&
         airdrop1Proof &&
@@ -87,6 +90,7 @@ export default function AirdropClaimButton({
             </Text>
           </>
         )}
+
       {isConnected &&
         status != 'success' &&
         !isClaimed &&
