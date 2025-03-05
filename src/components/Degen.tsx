@@ -85,12 +85,7 @@ export default function Degen() {
           Thank you for being part of this degen ride. Keep tipping, keep having
           fun!
         </p>
-        <ButtonPrimary
-          className="w-full mx-auto transition transform hover:scale-105"
-          onClick={claimAirdrop}
-        >
-          Claim
-        </ButtonPrimary>
+
         <AirdropClaim
           airdropContract="060f31a459D531987bEfd5a09c31B09946063cB3"
           merkleProofApi="https://api.degen.tips/airdrop2/season13/merkleproofs"
