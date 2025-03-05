@@ -37,7 +37,6 @@ export default function Degen() {
   return (
     <Container>
       <div className="absolute top-4 right-4">
-        {/* Wallet Button */}
         <ConnectWalletButton />
       </div>
 
