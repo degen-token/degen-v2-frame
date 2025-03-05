@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 
-import { Heading } from '@/components/catalyst/heading';
+import { Heading, Subheading } from '@/components/catalyst/heading';
 import AirdropClaimButton from '@/components/ui/AirdropClaimButton';
 import ConnectWalletButton from '@/components/ui/ConnectWalletButton';
 import Container from '@/components/ui/Container';
@@ -48,7 +48,7 @@ export default function Degen() {
         whileHover={{ scale: 1.05 }}
       >
         <Heading>Airdrop</Heading>
-        <h2 className="text-xl font-extrabold mb-3 animate-pulse">Season 13</h2>
+        <Subheading className="animate-pulse">Season 13</Subheading>
 
         <AirdropClaimButton
           airdropContract="060f31a459D531987bEfd5a09c31B09946063cB3"
