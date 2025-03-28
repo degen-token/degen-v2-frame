@@ -44,6 +44,19 @@ export default function Degen() {
           merkleProofApi="https://api.degen.tips/airdrop2/season14/merkleproofs"
         />
       </motion.div>
+
+      <motion.div
+        className="w-11/12 max-w-md p-4 bg-slate-800/30 bg-opacity-70 border border-violet-500/30 text-center mb-6"
+        whileHover={{ scale: 1.05 }}
+      >
+        <Heading>Raindrop</Heading>
+        <Subheading className="animate-pulse">Season 5</Subheading>
+
+        <AirdropClaimButton
+          airdropContract="9fD782825394Cc378414610Ff23359381D69af41"
+          merkleProofApi="https://api.degen.tips/raindrop/season5/merkleproofs"
+        />
+      </motion.div>
     </Container>
   );
 }
