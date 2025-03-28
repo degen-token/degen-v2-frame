@@ -22,7 +22,7 @@
     "react-canvas-confetti": "^2.0.7",
     "react-dom": "^19.0.0",
     "swr": "^2.3.3",
-    "viem": "~2.23.15",
+    "viem": "^2.24.1",
     "wagmi": "^2.14.15"
   },
   "devDependencies": {
