@@ -6,10 +6,9 @@ import {
   useAccount,
   useReadContract,
   useSimulateContract,
-  useSwitchChain,
   useWriteContract,
 } from 'wagmi';
-import { degen } from 'wagmi/chains';
+import { base } from 'wagmi/chains';
 
 import degenAirdrop1Abi from '@/abis/DegenAirdrop1.json';
 import { Button } from '@/components/catalyst/button';
@@ -29,14 +28,11 @@ const canvasStyles: CSSProperties = {
 export default function AirdropClaimButton({
   airdropContract,
   merkleProofApi,
-  isDegenChain = false,
 }: {
   airdropContract: string;
   merkleProofApi: string;
-  isDegenChain?: boolean;
 }) {
   const { isConnected, address } = useAccount();
-  const { switchChain } = useSwitchChain();
 
   const { data: airdrop1Proof } = useSWR(
     `${merkleProofApi}?wallet=${address}`,
@@ -65,12 +61,9 @@ export default function AirdropClaimButton({
     address: `0x${airdropContract}`,
     abi: degenAirdrop1Abi,
     functionName: 'claim',
-    chainId: degen.id,
+    chainId: base.id,
     args: [merkleIndex, merkleWallet, merkleAmount, merkleProof],
   });
-
-  console.log(error);
-  console.log(data);
 
   const {
     data: hash,

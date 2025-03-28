@@ -13,7 +13,7 @@ export function frameConnector() {
     type: frameConnector.type,
 
     async setup() {
-      this.connect({ chainId: config.chains[2].id });
+      this.connect({ chainId: config.chains[0].id });
     },
     async connect({ chainId } = {}) {
       const provider = await this.getProvider();
