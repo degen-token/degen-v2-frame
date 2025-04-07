@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={clsx('antialiased bg-slate-900', protoMono.variable)}>
         <div className="font-mono dark">
           <Providers>{children}</Providers>
+          <Analytics />
         </div>
       </body>
     </html>
