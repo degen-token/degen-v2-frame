@@ -11,30 +11,30 @@
     "vercel:vars": "vercel env pull .env.development.local"
   },
   "dependencies": {
-    "@farcaster/frame-sdk": "^0.0.31",
-    "@headlessui/react": "^2.2.0",
+    "@farcaster/frame-sdk": "^0.0.34",
+    "@headlessui/react": "^2.2.1",
     "@heroicons/react": "^2.2.0",
-    "@tanstack/react-query": "^5.69.3",
+    "@tanstack/react-query": "^5.72.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.6.2",
+    "framer-motion": "^12.6.3",
     "next": "^15.2.4",
-    "react": "^19.0.0",
+    "react": "^19.1.0",
     "react-canvas-confetti": "^2.0.7",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.1.0",
     "swr": "^2.3.3",
-    "viem": "^2.24.1",
-    "wagmi": "^2.14.15"
+    "viem": "^2.26.0",
+    "wagmi": "^2.14.16"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.0.17",
-    "@types/node": "^22.13.14",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "eslint": "^9.23.0",
+    "@tailwindcss/postcss": "^4.1.3",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "eslint": "^9.24.0",
     "eslint-config-next": "^15.2.4",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.17",
-    "typescript": "^5.8.2"
+    "tailwindcss": "^4.1.3",
+    "typescript": "^5.8.3"
   }
 }
