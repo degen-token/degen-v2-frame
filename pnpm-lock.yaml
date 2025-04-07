@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@farcaster/frame-sdk':
-        specifier: ^0.0.31
-        version: 0.0.31(typescript@5.8.3)(zod@3.24.2)
+        specifier: ^0.0.34
+        version: 0.0.34(typescript@5.8.3)(zod@3.24.2)
       '@headlessui/react':
         specifier: ^2.2.1
         version: 2.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -171,11 +171,11 @@ packages:
     resolution: {integrity: sha512-zQ0IqbdX8FZ9aw11vP+dZkKDkS+kgIvQPHnSAXzP9pLu+Rfu3D3XEeLbicvoXJTYnhZiPmsZUxgdzXwNKxRPbA==}
     engines: {node: '>=14'}
 
-  '@farcaster/frame-core@0.0.29':
-    resolution: {integrity: sha512-+iQjOS4OE0YCeW7hhBOg0QK8Pch7/C3mlkfD0OLey0Thnj4Uab4tWmvmfKxnsJNSYnESx9BT+Sw/pn9cueCl1Q==}
+  '@farcaster/frame-core@0.0.31':
+    resolution: {integrity: sha512-sZHG4Jt9aXqzdod+WksNtIKGgSuxBxJ2i3Fx1uAzeK29L1W/Osfsp3ZCpilEOjNHB9iRTqtGH7VKp3CPf312hA==}
 
-  '@farcaster/frame-sdk@0.0.31':
-    resolution: {integrity: sha512-ZRFA4HyfE1PIcEi++27ulSqrArv2qdVeYww7juM90DYgvqyGLtX6cTZS0UEoRL7iog2U8Rv2aq1ORLbePCBZuA==}
+  '@farcaster/frame-sdk@0.0.34':
+    resolution: {integrity: sha512-szPyiP3EWyX/CBskDIb4QF+X+lB4vy8mtyWwZfInBw/yXD/k73bFxAtzH88BVsTFI1220T6Erb35sJeme04tMQ==}
 
   '@floating-ui/core@1.6.9':
     resolution: {integrity: sha512-uMXCuQ3BItDUbAMhIXw7UPXRfAlOAvZzdK9BWpE60MCn+Svt3aLn9jsPTi/WNGlRUu2uI0v5S7JiIUsbsvh3fw==}
@@ -3038,16 +3038,16 @@ snapshots:
       ethereum-cryptography: 2.2.1
       micro-ftch: 0.3.1
 
-  '@farcaster/frame-core@0.0.29(typescript@5.8.3)':
+  '@farcaster/frame-core@0.0.31(typescript@5.8.3)':
     dependencies:
       ox: 0.4.4(typescript@5.8.3)(zod@3.24.2)
       zod: 3.24.2
     transitivePeerDependencies:
       - typescript
 
-  '@farcaster/frame-sdk@0.0.31(typescript@5.8.3)(zod@3.24.2)':
+  '@farcaster/frame-sdk@0.0.34(typescript@5.8.3)(zod@3.24.2)':
     dependencies:
-      '@farcaster/frame-core': 0.0.29(typescript@5.8.3)
+      '@farcaster/frame-core': 0.0.31(typescript@5.8.3)
       comlink: 4.4.2
       eventemitter3: 5.0.1
       ox: 0.4.4(typescript@5.8.3)(zod@3.24.2)
