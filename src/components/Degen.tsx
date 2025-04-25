@@ -50,11 +50,11 @@ export default function Degen() {
         whileHover={{ scale: 1.05 }}
       >
         <Heading>Raindrop</Heading>
-        <Subheading className="animate-pulse">Season 5</Subheading>
+        <Subheading className="animate-pulse">Season 6</Subheading>
 
         <AirdropClaimButton
-          airdropContract="9fD782825394Cc378414610Ff23359381D69af41"
-          merkleProofApi="https://api.degen.tips/raindrop/season5/merkleproofs"
+          airdropContract="c1661419D7F6ee2F44a6bCaCf3b254544EcEF066"
+          merkleProofApi="https://api.degen.tips/raindrop/season6/merkleproofs"
         />
       </motion.div>
     </Container>
