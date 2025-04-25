@@ -94,9 +94,7 @@ export default function AirdropClaimButton({
         airdrop1Proof[0] &&
         data && (
           <>
-            <Text className="pt-8">
-              You&apos;ve successfully claimed your rewards!
-            </Text>
+            <Text>You&apos;ve successfully claimed your rewards!</Text>
             <Fireworks autorun={{ speed: 1 }} style={canvasStyles} />
           </>
         )}
