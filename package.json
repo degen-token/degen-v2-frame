@@ -11,7 +11,7 @@
     "vercel:vars": "vercel env pull .env.development.local"
   },
   "dependencies": {
-    "@farcaster/frame-sdk": "^0.0.35",
+    "@farcaster/frame-sdk": "^0.0.53",
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@tanstack/react-query": "^5.79.0",
