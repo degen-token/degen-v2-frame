@@ -53,7 +53,7 @@ export default function Degen() {
         <Subheading className="animate-pulse">Season 7</Subheading>
 
         <AirdropClaimButton
-          airdropContract="50792386158ECfe7E3A98180165704d06b3c45d1"
+          airdropContract="7fFC3dE659e608990CAc407297CC6fC54552746A"
           merkleProofApi="https://api.degen.tips/raindrop/season7/merkleproofs"
         />
       </motion.div>
