@@ -11,7 +11,7 @@
     "vercel:vars": "vercel env pull .env.development.local"
   },
   "dependencies": {
-    "@farcaster/frame-sdk": "^0.0.53",
+    "@farcaster/frame-sdk": "^0.0.64",
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@tanstack/react-query": "^5.81.5",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "^22.15.34",
+    "@types/node": "^24.0.7",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.30.0",
