@@ -2,27 +2,36 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Here’s an updated **Getting Started** section that reflects your new workflow:
+
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   pnpm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run the development server locally**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   pnpm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   Your app will be available at **[http://localhost:3000](http://localhost:3000)** and will hot-reload as you edit files.
 
----
+3. **Expose the app with ngrok**
+
+   ```bash
+   pnpm run ngrok
+   ```
+
+   Copy the HTTPS forwarding URL that ngrok prints in the console.
+
+4. **Preview the mini-app on desktop**
+
+   1. Open [https://farcaster.xyz/\~/developers/mini-apps/preview](https://farcaster.xyz/~/developers/mini-apps/preview).
+   2. Paste the ngrok URL you copied in the previous step.
 
 ## Learn More
 
